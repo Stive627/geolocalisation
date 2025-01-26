@@ -24,7 +24,8 @@ const consumeIP = (req, res) => {
                 //     "name":val.name,
                 //     "timezone": (Math.floor(val.timezone / 3600)).toFixed(1)
                 // } 
-            return res.status(200).send(val.main.temp)
+                const info = {...val}
+            return res.status(200).send(info.main.temp)
             } catch (error) {
                 res.status(400).send(error.response)
                 console.log(error.response)
