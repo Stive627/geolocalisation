@@ -1,6 +1,6 @@
 const fetchUrl = require("./fetchUrl")
 const time = (timezone) => new Intl.DateTimeFormat('en-US', {'hour':'2-digit', 'minute':'2-digit'}).format(new Date(timezone))
-const consumeIP = (req, res) => {
+const weather = (req, res) => {
     var ipAddress = req.ip
     var urllocation = `http://ip-api.com/json/${ipAddress}`
     var YOUR_ACCESS_KEY = 'e9e6d72748bba48c0342882ec1dd5da2'
@@ -11,4 +11,4 @@ const consumeIP = (req, res) => {
         })
     })
 }
-module.exports = consumeIP
+module.exports = weather
