@@ -1,5 +1,4 @@
 const fetchUrl = require("./fetchUrl")
-
 const consumeIP = (req, res) => {
     var ipAddress = req.ip
     var urllocation = `http://ip-api.com/json/${ipAddress}`
@@ -8,7 +7,7 @@ const consumeIP = (req, res) => {
         var urlWeather = `http://api.openweathermap.org/data/2.5/weather?`+`lat=${value.lat}&lon=${value.lon}&appid=${YOUR_ACCESS_KEY}`
         fetchUrl(urlWeather,(val) => {
             try {
-                // const information ={
+                // const information = {
                 //     "temp":val.main.temp,
                 //     "feels_like": val.main.temp_max,
                 //     "temp_min":val.main.temp_min,
